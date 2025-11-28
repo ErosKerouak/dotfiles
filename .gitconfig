@@ -1,0 +1,13 @@
+[user]
+	name = ErosKerouak
+	email = eroskerouak@gmail.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[diff]
+	tool = nbdime
+[difftool "nbdime"]
+	cmd = nbdiff \"$LOCAL\" \"$REMOTE\"
+[alias]
+	diffall = diff --no-renames --unified=9999

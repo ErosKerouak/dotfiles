@@ -1,0 +1,85 @@
+{
+    // Jupyter e interface
+    "jupyter.askForKernelRestart": false,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "chat.commandCenter.enabled": false,
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.editor.highlightModifiedTabs": true, // Marca abas modificadas
+    "workbench.colorTheme": "One Dark Pro",
+    // Fonte e aparência
+    "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+    "editor.fontWeight": "600",
+    "editor.fontSize": 18,
+    "editor.lineHeight": 22,
+    "editor.fontLigatures": true,
+    "editor.renderWhitespace": "boundary", // Mostra espaços e tabs
+    // Salvamento e limpeza
+    "files.trimTrailingWhitespace": true, // Remove espaços finais
+    "files.insertFinalNewline": true, // Adiciona newline no fim
+    "files.trimFinalNewlines": true, // Remove linhas em branco extras
+    // Formatação e indentação
+    "editor.formatOnSave": true, // Formata ao salvar
+    "[latex]": {
+        "editor.formatOnSave": false
+    }
+    "editor.trimAutoWhitespace": true, // Remove espaços gerados automaticamente
+    "editor.insertSpaces": true, // Usa espaços ao invés de tabs
+    "editor.tabSize": 4, // Tamanho do tab
+    "editor.detectIndentation": false, // Não sobrescreve sua config
+    // Spell checker: línguas e comportamento
+    "cSpell.language": "en,pt,pt_BR",
+    "cSpell.enabledLanguageIds": [
+        "plaintext",
+        "markdown",
+        "latex"
+    ],
+    "cSpell.allowCompoundWords": true,
+    // Python e Jupyter
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic", // Verificação de tipos leve
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.useLibraryCodeForTypes": true,
+    // Markdown & escrita
+    "markdown.preview.breaks": true, // Quebra linha com Enter
+    "markdown.preview.scrollEditorWithPreview": true, // Sincroniza editor ↔ preview
+    "markdown.preview.scrollPreviewWithEditor": true,
+    "markdown.preview.fontSize": 14,
+    // LaTeX com Tectonic
+    "latex-workshop.latex.tools": [
+        {
+            "name": "tectonic",
+            "command": "/home/lpga/miniforge3/bin/tectonic",
+            "args": [
+                "--synctex",
+                "--keep-intermediates",
+                "--keep-logs",
+                "%DOC%.tex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "tectonic",
+            "tools": [
+                "tectonic"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.view.pdf.viewer": "none",
+    //"latex-workshop.synctex.afterBuild.enabled": true, // Sincroniza PDF↔code
+    "latex-workshop.intellisense.package.enabled": true, // Autocompleta pacotes
+    // Oculta arquivos auxiliares no explorador
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.log": true,
+        "**/*.synctex.gz": true,
+        "**/*.fls": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.out": true
+    },
+    "workbench.editorAssociations": {
+        "*.pdf": "pdf.preview"
+    }
+}
