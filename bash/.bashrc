@@ -117,21 +117,34 @@ if ! shopt -oq posix; then
 fi
 
 # >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/lpga/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/lpga/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/lpga/miniforge3/etc/profile.d/conda.sh"
+# !! Contents within this block are gerenciados por mim, não pelo 'conda init' !! :^)
+
+if [ -d "$HOME/miniforge3" ]; then
+    __conda_setup="$("$HOME/miniforge3/bin/conda" shell.bash hook 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    elif [ -f "$HOME/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/lpga/miniforge3/bin:$PATH"
+        export PATH="$HOME/miniforge3/bin:$PATH"
     fi
+    unset __conda_setup
+
+elif [ -d "$HOME/miniconda3" ]; then
+    __conda_setup="$("$HOME/miniconda3/bin/conda" shell.bash hook 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    elif [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="$HOME/miniconda3/bin:$PATH"
+    fi
+    unset __conda_setup
 fi
-unset __conda_setup
 # <<< conda initialize <<<
+
+
 
 # Definindo o Vim como editor padrão
 export EDITOR=nvim
 export VISUAL=nvim
-
