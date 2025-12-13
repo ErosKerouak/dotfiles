@@ -6,8 +6,9 @@
     "chat.commandCenter.enabled": false,
     "workbench.settings.openDefaultSettings": true,
     "workbench.editor.highlightModifiedTabs": true, // Marca abas modificadas
+    // Tema (depende da extensão estar instalada)
     "workbench.colorTheme": "One Dark Pro",
-    // Fonte e aparência
+    // Fonte e aparência (depende da fonte estar instalada)
     "editor.fontFamily": "'JetBrainsMono Nerd Font'",
     "editor.fontWeight": "600",
     "editor.fontSize": 18,
@@ -22,12 +23,12 @@
     "editor.formatOnSave": true, // Formata ao salvar
     "[latex]": {
         "editor.formatOnSave": false
-    }
+    },
     "editor.trimAutoWhitespace": true, // Remove espaços gerados automaticamente
     "editor.insertSpaces": true, // Usa espaços ao invés de tabs
     "editor.tabSize": 4, // Tamanho do tab
     "editor.detectIndentation": false, // Não sobrescreve sua config
-    // Spell checker: línguas e comportamento
+    // Spell checker: línguas e comportamento (depende da extensão Code Spell Checker)
     "cSpell.language": "en,pt,pt_BR",
     "cSpell.enabledLanguageIds": [
         "plaintext",
@@ -35,7 +36,7 @@
         "latex"
     ],
     "cSpell.allowCompoundWords": true,
-    // Python e Jupyter
+    // Python e Jupyter (depende da extensão Python)
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "basic", // Verificação de tipos leve
     "python.analysis.autoSearchPaths": true,
@@ -45,11 +46,12 @@
     "markdown.preview.scrollEditorWithPreview": true, // Sincroniza editor ↔ preview
     "markdown.preview.scrollPreviewWithEditor": true,
     "markdown.preview.fontSize": 14,
-    // LaTeX com Tectonic
+    // LaTeX com Tectonic (depende da extensão LaTeX Workshop)
+    // Portável: usa "tectonic" pelo PATH (conda env ou sistema)
     "latex-workshop.latex.tools": [
         {
             "name": "tectonic",
-            "command": "/home/lpga/miniforge3/bin/tectonic",
+            "command": "tectonic",
             "args": [
                 "--synctex",
                 "--keep-intermediates",
@@ -68,7 +70,7 @@
     ],
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.view.pdf.viewer": "none",
-    //"latex-workshop.synctex.afterBuild.enabled": true, // Sincroniza PDF↔code
+    // "latex-workshop.synctex.afterBuild.enabled": true, // Sincroniza PDF↔code
     "latex-workshop.intellisense.package.enabled": true, // Autocompleta pacotes
     // Oculta arquivos auxiliares no explorador
     "files.exclude": {
