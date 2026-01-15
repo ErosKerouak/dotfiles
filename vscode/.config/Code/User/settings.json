@@ -11,7 +11,7 @@
     // Fonte e aparência (depende da fonte estar instalada)
     "editor.fontFamily": "'JetBrainsMono Nerd Font'",
     "editor.fontWeight": "600",
-    "editor.fontSize": 18,
+    "editor.fontSize": 17,
     "editor.lineHeight": 22,
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "boundary", // Mostra espaços e tabs
