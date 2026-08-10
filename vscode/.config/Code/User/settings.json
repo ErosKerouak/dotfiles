@@ -11,7 +11,7 @@
     // Fonte e aparência (depende da fonte estar instalada)
     "editor.fontFamily": "'JetBrainsMono Nerd Font'",
     "editor.fontWeight": "600",
-    "editor.fontSize": 18,
+    "editor.fontSize": 17,
     "editor.lineHeight": 22,
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "boundary", // Mostra espaços e tabs
@@ -41,6 +41,7 @@
     "python.analysis.typeCheckingMode": "basic", // Verificação de tipos leve
     "python.analysis.autoSearchPaths": true,
     "python.analysis.useLibraryCodeForTypes": true,
+    "python.useEnvironmentsExtension": false,
     // Markdown & escrita
     "markdown.preview.breaks": true, // Quebra linha com Enter
     "markdown.preview.scrollEditorWithPreview": true, // Sincroniza editor ↔ preview
@@ -68,7 +69,7 @@
             ]
         }
     ],
-    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.view.pdf.viewer": "none",
     // "latex-workshop.synctex.afterBuild.enabled": true, // Sincroniza PDF↔code
     "latex-workshop.intellisense.package.enabled": true, // Autocompleta pacotes
@@ -83,5 +84,7 @@
     },
     "workbench.editorAssociations": {
         "*.pdf": "pdf.preview"
-    }
+    },
+    "workbench.statusBar.visible": false,
+    "terminal.integrated.inheritEnv": false
 }
