@@ -5,7 +5,7 @@
     "editor.wordWrap": "on",
     "chat.commandCenter.enabled": false,
     "workbench.settings.openDefaultSettings": true,
-    "workbench.editor.highlightModifiedTabs": true, // Marca abas modificadas
+    "workbench.editor.highlightModifiedTabs": true,
     // Tema (depende da extensão estar instalada)
     "workbench.colorTheme": "One Dark Pro",
     // Fonte e aparência (depende da fonte estar instalada)
@@ -19,6 +19,8 @@
     "files.trimTrailingWhitespace": true, // Remove espaços finais
     "files.insertFinalNewline": true, // Adiciona newline no fim
     "files.trimFinalNewlines": true, // Remove linhas em branco extras
+    // Área de transferência
+    "editor.copyWithSyntaxHighlighting": false,
     // Formatação e indentação
     "editor.formatOnSave": true, // Formata ao salvar
     "[latex]": {
@@ -28,7 +30,7 @@
     "editor.insertSpaces": true, // Usa espaços ao invés de tabs
     "editor.tabSize": 4, // Tamanho do tab
     "editor.detectIndentation": false, // Não sobrescreve sua config
-    // Spell checker: línguas e comportamento (depende da extensão Code Spell Checker)
+    // Spell checker: línguas e comportamento
     "cSpell.language": "en,pt,pt_BR",
     "cSpell.enabledLanguageIds": [
         "plaintext",
@@ -36,6 +38,10 @@
         "latex"
     ],
     "cSpell.allowCompoundWords": true,
+    // Unicode: permite caracteres normais do português
+    "editor.unicodeHighlight.allowedLocales": {
+        "pt": true
+    },
     // Python e Jupyter (depende da extensão Python)
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "basic", // Verificação de tipos leve
@@ -86,5 +92,7 @@
         "*.pdf": "pdf.preview"
     },
     "workbench.statusBar.visible": false,
-    "terminal.integrated.inheritEnv": false
+    "terminal.integrated.inheritEnv": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "accessibility.signalOptions.volume": 0
 }
