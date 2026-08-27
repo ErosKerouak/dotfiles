@@ -117,30 +117,18 @@ if ! shopt -oq posix; then
 fi
 
 # >>> conda initialize >>>
-# !! Contents within this block are gerenciados por mim, não pelo 'conda init' !! :^)
-
-if [ -d "$HOME/miniforge3" ]; then
-    __conda_setup="$("$HOME/miniforge3/bin/conda" shell.bash hook 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    elif [ -f "$HOME/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniforge3/etc/profile.d/conda.sh"
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/eroskerouak/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/eroskerouak/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/eroskerouak/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="$HOME/miniforge3/bin:$PATH"
+        export PATH="/home/eroskerouak/miniforge3/bin:$PATH"
     fi
-    unset __conda_setup
-
-elif [ -d "$HOME/miniconda3" ]; then
-    __conda_setup="$("$HOME/miniconda3/bin/conda" shell.bash hook 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    elif [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOME/miniconda3/bin:$PATH"
-    fi
-    unset __conda_setup
 fi
+unset __conda_setup
 # <<< conda initialize <<<
 
 
@@ -148,3 +136,19 @@ fi
 # Definindo o Vim como editor padrão
 export EDITOR=nvim
 export VISUAL=nvim
+
+# Adicionando executáveis locais do usuário ao PATH
+export PATH="$HOME/.local/bin:$PATH"
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba shell init' !!
+export MAMBA_EXE='/home/eroskerouak/miniforge3/bin/mamba';
+export MAMBA_ROOT_PREFIX='/home/eroskerouak/miniforge3';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
