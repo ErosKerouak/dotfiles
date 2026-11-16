@@ -94,5 +94,9 @@
     "workbench.statusBar.visible": false,
     "terminal.integrated.inheritEnv": false,
     "editor.unicodeHighlight.nonBasicASCII": false,
-    "accessibility.signalOptions.volume": 0
+    "accessibility.signalOptions.volume": 0,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ]
 }
